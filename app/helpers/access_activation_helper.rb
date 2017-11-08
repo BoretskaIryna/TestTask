@@ -1,0 +1,2 @@
+module AccessActivationHelper
+end

@@ -1,0 +1,5 @@
+<p>Welcome <%= @user.email %>!</p>
+
+<p>You can confirm your access through the link below:</p>
+
+<p><%= link_to 'Access team', edit_access_activation_url(@member.activation_token, member_id: @member.id) %></p>

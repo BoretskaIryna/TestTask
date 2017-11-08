@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :access_teams, only: [:edit]
+  resources :access_activation, only: [:edit]
   resources :members
   get 'members/destroy'
 

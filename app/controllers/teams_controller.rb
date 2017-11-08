@@ -20,7 +20,7 @@ class TeamsController < ApplicationController
   # GET /teams/1
   # GET /teams/1.json
   def show
-    @members = Member.where(team_id: @team.id)
+    @members = Member.where(team_id: @team.id, activated: true)
   end
 
   # GET /teams/new

@@ -10,13 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171107133446) do
+ActiveRecord::Schema.define(version: 20171108134247) do
 
   create_table "members", force: :cascade do |t|
     t.integer "team_id"
     t.integer "collaborator_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "activation_digest"
+    t.boolean "activated", default: false
+    t.time "activated_at"
     t.index ["collaborator_id"], name: "index_members_on_collaborator_id"
     t.index ["team_id", "collaborator_id"], name: "index_members_on_team_id_and_collaborator_id", unique: true
     t.index ["team_id"], name: "index_members_on_team_id"

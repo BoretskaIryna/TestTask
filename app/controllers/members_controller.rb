@@ -1,4 +1,5 @@
 class MembersController < ApplicationController
+  include  ApplicationHelper
   before_action :set_member, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
   before_action :only_pm, only: [:new, :edit, :create, :update, :destroy]
@@ -6,7 +7,7 @@ class MembersController < ApplicationController
   # GET /members
   # GET /members.json
   def index
-    @members = Member.all
+    @members = Member..where(activated: true)
   end
 
   # GET /members/1
@@ -33,6 +34,11 @@ class MembersController < ApplicationController
 
     respond_to do |format|
       if @member.save
+        MemberMailer.access_activation(User.find(@member.collaborator_id), @member).deliver_now
+        flash[:info] = "Please check your email to activate your account."
+        #redirect_to root_url
+
+
         format.html { redirect_to @member, notice: 'Member was successfully created.' }
         format.json { render :show, status: :created, location: @member }
       else

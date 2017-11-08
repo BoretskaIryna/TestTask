@@ -76,6 +76,14 @@ Team.create!(name: "Second",
 
 
 Member.create!(team_id: 1,
-               collaborator_id:2)
+               collaborator_id:2,
+               activated: true,
+               activated_at: Time.zone.now)
 Member.create!(team_id: 1,
-               collaborator_id:4)
+               collaborator_id:4,
+               activated: true,
+               activated_at: Time.zone.now)
+Member.create!(team_id: 1,
+               collaborator_id:5,
+               activated: false,
+               activated_at: Time.zone.now)

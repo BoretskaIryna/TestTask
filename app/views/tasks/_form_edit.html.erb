@@ -1,0 +1,54 @@
+<%= form_with(model: task, local: true) do |form| %>
+    <% if task.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(task.errors.count, "error") %> prohibited this task from being saved:</h2>
+
+          <ul>
+            <% task.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= form.label :name %> <br \>
+      <% if current_user.project_manager %>
+        <%= form.text_field :name, id: :task_name%>
+      <% else %>
+          <%= @task.name %>
+      <% end %>
+    </div>
+
+    <div class="field">
+    <%= form.label :status %><br \>
+      <% if !current_user.project_manager%>
+        <%= form.select :status, ['in progress', 'done'] %>
+      <% else %>
+        <%= @task.status %>
+      <% end %>
+    </div>
+
+    <div class="field">
+      <%= form.label :type_task %> <br \>
+      <% if current_user.project_manager %>
+          <%= form.select :type_task, ['test', 'code', 'bug fix'] %>
+      <% else %>
+          <%= @task.type_task %>
+      <% end %>
+    </div>
+
+    <% if !current_user.project_manager%>
+      <%= form.label :pm_id %> <br \>
+      <%= User.find(@task.pm_id).name %>
+    <% end %>
+
+    <% if current_user.project_manager%>
+        <%= form.label :collaborator_id %>
+        <%= form.collection_select :collaborator_id, User.where(:project_manager => false),  :id, :name %>
+    <% end %>
+
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+<% end %>

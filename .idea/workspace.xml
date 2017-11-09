@@ -46,16 +46,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/teams/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/teams/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
@@ -96,11 +86,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="development.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="development.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-198">
               <caret line="34" column="30" lean-forward="true" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="45" column="2" lean-forward="false" selection-start-line="45" selection-start-column="2" selection-end-line="45" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -129,7 +129,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/controllers/users/registrations_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/users/registrations/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/views/users/registrations/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/users/sessions/show.html.erb" />
@@ -180,6 +179,7 @@
         <option value="$PROJECT_DIR$/app/views/tasks/index.html.erb" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
       </list>
     </option>
   </component>
@@ -372,12 +372,12 @@
       <workItem from="1510130841378" duration="19419000" />
       <workItem from="1510213228256" duration="1789000" />
       <workItem from="1510215040209" duration="1792000" />
-      <workItem from="1510216883938" duration="744000" />
+      <workItem from="1510216883938" duration="1045000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57821000" />
+    <option name="totallyTimeSpent" value="58122000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="117" y="24" width="1537" height="912" extended-state="6" />
@@ -413,13 +413,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///var/lib/gems/2.3.0/gems/devise-4.3.0/app/controllers/devise/confirmations_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="42" lean-forward="false" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///var/lib/gems/2.3.0/gems/devise-4.3.0/app/controllers/devise/omniauth_callbacks_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -752,6 +745,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="45" column="2" lean-forward="false" selection-start-line="45" selection-start-column="2" selection-end-line="45" selection-end-column="2" />
           <folding />
         </state>
       </provider>

@@ -32,11 +32,10 @@
     <%= form.number_field :pm_id, id: :task_pm_id %>
   </div>-->
 
-  <div class="field">
-    <%= form.label :collaborator_id %>
-    <%= form.collection_select :collaborator_id, @users,  :id, :name%>
-
-  </div>
+    <div class="field">
+      <%= form.label :collaborator_id %>
+      <%= form.collection_select :collaborator_id, @users,  :id, :name%>
+    </div>
 
   <div class="actions">
     <%= form.submit %>

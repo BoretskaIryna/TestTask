@@ -6,38 +6,38 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create!(name:  "Iryna Boretska",
-             email: "boretskairuna@gmail.com",
-             password:              "asdzxc",
-             password_confirmation: "asdzxc",
-             project_manager: true,
-             confirmed_at: Time.zone.now)
-
-User.create!(name:  "Example Customer",
-             email: "example@railstutorial.org",
-             password:              "foobar",
-             password_confirmation: "foobar",
-             project_manager: false,
-             confirmed_at: Time.zone.now)
-
-User.create!(name:  "Example PM",
-             email: "foo@bar.com",
+User.create!(name:  "Example PM1",
+             email: "example_pm1@gmail.com",
              password:              "foobar",
              password_confirmation: "foobar",
              project_manager: true,
              confirmed_at: Time.zone.now)
 
-User.create!(name:  "Example1 Customer1",
-             email: "example1@railstutorial.org",
+User.create!(name:  "Example Collaborator1",
+             email: "example_coll1@gmail.com",
              password:              "foobar",
              password_confirmation: "foobar",
              project_manager: false,
              confirmed_at: Time.zone.now)
 
-User.create!(name:  "Iryna Boretska",
-             email: "boretskairuna23@gmail.com",
-             password:              "asdzxc",
-             password_confirmation: "asdzxc",
+User.create!(name:  "Example PM2",
+             email: "example_pm2@gmail.com",
+             password:              "foobar",
+             password_confirmation: "foobar",
+             project_manager: true,
+             confirmed_at: Time.zone.now)
+
+User.create!(name:  "Example1 Collaborator2",
+             email: "example_coll2@gmail.com",
+             password:              "foobar",
+             password_confirmation: "foobar",
+             project_manager: false,
+             confirmed_at: Time.zone.now)
+
+User.create!(name:  "Example1 Collaborator3",
+             email: "example_coll3@gmail.com",
+             password:              "foobar",
+             password_confirmation: "foobar",
              project_manager: false,
              confirmed_at: Time.zone.now)
 

@@ -2,6 +2,11 @@
 
 <h1>Tasks</h1>
 
+<%if @tasks.empty?%>
+    <p>You don't have any task! Congratulation! You have a lot of free time!</p>
+<% else %>
+
+
 <table class="table">
   <thead>
     <tr>
@@ -30,6 +35,8 @@
     <% end %>
   </tbody>
 </table>
+
+<%end%>
 
 <br>
 

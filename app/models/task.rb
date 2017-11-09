@@ -4,11 +4,11 @@ class Task < ApplicationRecord
 
   validates :pm_id, :inclusion => { :in =>  User.where(project_manager: true).ids,
                                     :message    => "%{value} is not a valid pm_id" }
-  validates :collaborator_id, :inclusion => { :in =>  User.where(project_manager: false).ids,
-                                    :message    => "%{value} is not a valid test collaboration_id" }
+  validates :collaborator_id,  :inclusion => { :in =>  User.where(project_manager: false).ids,
+                                   :message    => "%{value} is not a valid collaboration_id" }
   validates :type_task, :inclusion => {:in =>  ['bug fix', 'code', 'test'],
-                                       :message    => "%{value} is not a valid test type_task"}
+                                       :message    => "%{value} is not a valid type_task"}
   validates :status, :inclusion => {:in =>  ['new', 'open', 'in progress', 'done'],
-                                       :message    => "%{value} is not a valid test status"}
+                                       :message    => "%{value} is not a valid status"}
   validates :name, presence: true
 end

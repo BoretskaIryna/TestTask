@@ -25,7 +25,8 @@ class TeamsController < ApplicationController
 
   # GET /teams/new
   def new
-    @team = Team.new
+    debugger
+    @team = current_user.teams.build
   end
 
   # GET /teams/1/edit
@@ -35,9 +36,9 @@ class TeamsController < ApplicationController
   # POST /teams
   # POST /teams.json
   def create
-    @team = Team.new(team_params)
+    @team = current_user.teams.build(team_params)
 
-    @team.leader_id = current_user.id
+    #@team.leader_id = current_user.id
 
     respond_to do |format|
       if @team.save
@@ -54,7 +55,7 @@ class TeamsController < ApplicationController
   # PATCH/PUT /teams/1.json
   def update
     respond_to do |format|
-      if @team.update(team_params_for_edit)
+      if @team.update(team_params)
         format.html { redirect_to @team, notice: 'Team was successfully updated.' }
         format.json { render :show, status: :ok, location: @team }
       else
@@ -82,10 +83,6 @@ class TeamsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def team_params
-      params.require(:team).permit(:name, :leader_id)
-    end
-
-    def team_params_for_edit
       params.require(:team).permit(:name)
     end
 

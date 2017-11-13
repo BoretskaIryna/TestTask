@@ -25,7 +25,8 @@ class TasksController < ApplicationController
 
   # GET /tasks/new
   def new
-    @task = Task.new
+    #@task = Task.new
+    @task = current_user.pm_task.build
     @task.status = "new"
     @users = User.where(:project_manager => false)
   end
@@ -37,10 +38,10 @@ class TasksController < ApplicationController
   # POST /tasks
   # POST /tasks.json
   def create
-    @task = Task.new(task_params)
-
+    @task = current_user.pm_task.build(task_params)
+    #@task = Task.new(task_params)
     @task.status = "open"
-    @task.pm_id = current_user.id
+    #@task.pm_id = current_user.id
     #@task.collaborator_id = 0
 
     respond_to do |format|
@@ -88,7 +89,7 @@ class TasksController < ApplicationController
     def task_params
       params[:task][:type_task].downcase!
       #params[:task][:status].downcase!
-      params.require(:task).permit(:name, :status, :type_task, :pm_id, :collaborator_id)
+      params.require(:task).permit(:name, :status, :type_task, :collaborator_id)
 
     end
 
